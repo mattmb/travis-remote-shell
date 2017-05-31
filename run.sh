@@ -14,4 +14,7 @@ chmod 600 /root/.ssh/*
 {
     ./ngrok tcp 22 --authtoken=$NGROK_TOKEN --log=stdout --log-level=debug | grep "tcp.ngrok.io" || true
 } &
-sleep 120m
+for i in {0..20}; do
+  sleep 5m
+  echo "Doing something"
+done
